@@ -2,6 +2,10 @@
   img {
       display: block;
   }
+
+  i {
+    font-size: 16px;
+  }
   .btn {
       display: inline-block;
       font: inherit;
@@ -154,7 +158,7 @@
 
   .gallery-item-type {
       position: absolute;
-      top: 1rem;
+      top: 0;
       right: 1rem;
       font-size: 2.5rem;
       text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);

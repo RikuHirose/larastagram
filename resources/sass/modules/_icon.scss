@@ -1,0 +1,31 @@
+/* ----------------------------------------------------------------------------
+ * icon from fontawesome
+ * ------------------------------------------------------------------------- */
+.fa {
+  &-heart-red {
+    &::before {
+      font-family: $_fontawesome;
+      content: $_fa-heart;
+      font-weight: 900;
+      color: #ff9393;
+    }
+  }
+
+  &-heart-gray {
+    &::before {
+      font-family: $_fontawesome;
+      content: $_fa-heart;
+      font-weight: 900;
+      color: gray;
+    }
+  }
+
+  &-heart-white {
+    &::before {
+      font-family: $_fontawesome;
+      content: $_fa-heart;
+      font-weight: 900;
+      color: #fff;
+    }
+  }
+}

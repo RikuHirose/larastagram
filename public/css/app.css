@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Roboto);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -10882,6 +10882,31 @@ a.text-dark:focus {
   }
 }
 
+/* ----------------------------------------------------------------------------
+ * icon from fontawesome
+ * ------------------------------------------------------------------------- */
+
+.fa-heart-red::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F004";
+  font-weight: 900;
+  color: #ff9393;
+}
+
+.fa-heart-gray::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F004";
+  font-weight: 900;
+  color: gray;
+}
+
+.fa-heart-white::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F004";
+  font-weight: 900;
+  color: #fff;
+}
+
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -10993,6 +11018,10 @@ a.text-dark:focus {
 
 .p-user-show img {
   display: block;
+}
+
+.p-user-show i {
+  font-size: 16px;
 }
 
 .p-user-show .btn {
@@ -11143,7 +11172,7 @@ a.text-dark:focus {
 
 .p-user-show .gallery-item-type {
   position: absolute;
-  top: 1rem;
+  top: 0;
   right: 1rem;
   font-size: 2.5rem;
   text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);

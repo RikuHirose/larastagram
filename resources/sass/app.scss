@@ -7,16 +7,19 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "./fontawesome";
+
+// modules
+@import "./modules/icon";
 
 // layouts
-@import './layouts/header.scss';
+@import './layouts/header';
 
 // components
-@import './components/post/block.scss';
+@import './components/post/block';
 
 // pages
-@import './pages/user/show.scss';
+@import './pages/user/show';
 
   :root {
     font-size: 10px;
@@ -50,7 +53,6 @@
       overflow: hidden;
       clip: rect(1px, 1px, 1px, 1px);
   }
-
 
 p {
   margin-bottom: 0px;
