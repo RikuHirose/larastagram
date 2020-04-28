@@ -10906,6 +10906,7 @@ body {
 
 .window {
   width: 280px;
+  min-height: 640px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -10928,24 +10929,7 @@ body {
   box-shadow: 0 2px 5px 0px #ddd;
 }
 
-.window .footer {
-  display: flex;
-  align-items: flex-end;
-  padding: 10px 10px;
-  justify-content: space-between;
-  background-color: #F9F9F9;
-  box-shadow: 0 -2px 5px 0px #ddd;
-}
-
-.window .footer img {
-  opacity: 0.2;
-}
-
-.window .footer img:first-child {
-  opacity: 1;
-}
-
-.window .content {
+.content {
   display: flex;
   flex-direction: column;
   height: 100%;

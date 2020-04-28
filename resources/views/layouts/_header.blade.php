@@ -1,18 +1,32 @@
-<div class="header">
-    <img src="https://image.flaticon.com/icons/svg/25/25315.svg" width="8%"/>
-    <img src="https://cdn.worldvectorlogo.com/logos/instagram-1.svg" width="25%"/>
-    <!-- <img src="https://image.flaticon.com/icons/svg/20/20402.svg" width="8%"/> -->
+<div class="header container">
+    <div class="row">
+        <div class="col-sm-4">
+            <a href="{{ route('posts.create') }}">
+                <img src="https://image.flaticon.com/icons/svg/25/25315.svg" width="25%"/>
+            </a>
+        </div>
 
-    <img src="https://randomuser.me/api/portraits/women/84.jpg" width="8%" class="profile-img dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="{{ route('logout') }}"
-           onclick="event.preventDefault();
-                         document.getElementById('logout-form').submit();">
-            {{ __('Logout') }}
-        </a>
+        <div class="col-sm-4">
+            <a href="{{ route('index') }}">
+                <img src="https://cdn.worldvectorlogo.com/logos/instagram-1.svg" width="100%"/>
+            </a>
+        </div>
 
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
-        </form>
+        <div class="col-sm-4 text-right">
+            <!-- <img src="https://image.flaticon.com/icons/svg/20/20402.svg" width="8%"/> -->
+
+            <img src="https://randomuser.me/api/portraits/women/84.jpg" width="25%" class="profile-img dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            </div>
+        </div>
     </div>
 </div>
