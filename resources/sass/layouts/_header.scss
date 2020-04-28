@@ -1,0 +1,15 @@
+.header{
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+
+  width: 100%;
+  display:flex;
+  align-items:flex-start;
+  flex-direction: row;;
+  padding:10px 10px;
+  justify-content:space-between;
+  background-color:#F9F9F9;
+  box-shadow:0 2px 5px 0px #ddd;
+}

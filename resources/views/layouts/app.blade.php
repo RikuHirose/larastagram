@@ -21,14 +21,14 @@
 </head>
 <body>
     <div id="app">
-        <div class="window">
+        <div>
             @guest
 
             @else
                 @include('layouts._header')
             @endguest
 
-            <div class="content">
+            <div class="container">
                 @yield('content')
             </div>
         </div>

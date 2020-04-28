@@ -10882,38 +10882,7 @@ a.text-dark:focus {
   }
 }
 
-p {
-  margin-bottom: 0px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.window {
-  width: 280px;
-  min-height: 640px;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.window .header {
+.header {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
@@ -10929,67 +10898,466 @@ body {
   box-shadow: 0 2px 5px 0px #ddd;
 }
 
-.content {
+.c-post-block {
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.content .post {
+.c-post-block img {
+  display: inline-block;
+}
+
+.c-post-block .post * {
+  padding: 5px 0px;
+}
+
+.c-post-block .post {
   display: flex;
   align-items: center;
   padding: 0px 10px;
   justify-content: space-between;
 }
 
-.content .post * {
-  padding: 5px 0px;
-}
-
-.content .post .profile-img {
+.c-post-block .post .profile-img {
   border-radius: 50%;
+  width: 24%;
 }
 
-.content .post .name {
+.c-post-block .post .detail-img {
+  width: 2%;
+  opacity: 0.5;
+}
+
+.c-post-block .post .name {
   display: flex;
   justify-content: flex-start;
 }
 
-.content .post .name p {
+.c-post-block .post .name p {
   padding-left: 5px;
   font-weight: bold;
-  font-size: 0.8em;
+  font-size: 16px;
 }
 
-.content .likes {
+.c-post-block .likes {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.content .likes * {
+.c-post-block .likes img {
+  width: 5%;
+}
+
+.c-post-block .likes * {
   padding: 5px 5px;
 }
 
-.content .like-count {
+.c-post-block .like-count {
   display: flex;
   align-items: center;
   padding: 0px 10px;
 }
 
-.content .like-count p {
+.c-post-block .like-count img {
+  width: 3%;
+}
+
+.c-post-block .like-count p {
   font-size: 0.7em;
   padding: 5px;
   font-weight: bold;
 }
 
-footer {
-  color: #fff;
-  padding-top: 5px;
-  font-size: 0.8em;
+.p-user-show {
+  /* Profile Section */
+  /* Gallery Section */
+  /* Loader */
+  /* Media Query */
+  /* Spinner Animation */
+  /*
+
+  The following code will only run if your browser supports CSS grid.
+
+  Remove or comment-out the code block below to see how the browser will fall-back to flexbox & floated styling. 
+
+  */
 }
 
-footer a {
-  color: #aaa;
+.p-user-show img {
+  display: block;
+}
+
+.p-user-show .btn {
+  display: inline-block;
+  font: inherit;
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+
+.p-user-show .btn:focus {
+  outline: 0.5rem auto #4d90fe;
+}
+
+.p-user-show .visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.p-user-show .profile {
+  padding: 5rem 0;
+}
+
+.p-user-show .profile::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.p-user-show .profile-image {
+  float: left;
+  width: calc(33.333% - 1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.p-user-show .profile-image img {
+  border-radius: 50%;
+}
+
+.p-user-show .profile-user-settings,
+.p-user-show .profile-stats,
+.p-user-show .profile-bio {
+  float: left;
+  width: calc(66.666% - 2rem);
+}
+
+.p-user-show .profile-user-settings {
+  margin-top: 1.1rem;
+}
+
+.p-user-show .profile-user-name {
+  display: inline-block;
+  font-size: 3.2rem;
+  font-weight: 300;
+}
+
+.p-user-show .profile-edit-btn {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  border: 0.1rem solid #dbdbdb;
+  border-radius: 0.3rem;
+  padding: 0 2.4rem;
+  margin-left: 2rem;
+}
+
+.p-user-show .profile-settings-btn {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.p-user-show .profile-stats {
+  margin-top: 2.3rem;
+}
+
+.p-user-show .profile-stats li {
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-right: 4rem;
+  cursor: pointer;
+}
+
+.p-user-show .profile-stats li:last-of-type {
+  margin-right: 0;
+}
+
+.p-user-show .profile-bio {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 2.3rem;
+}
+
+.p-user-show .profile-real-name,
+.p-user-show .profile-stat-count,
+.p-user-show .profile-edit-btn {
+  font-weight: 600;
+}
+
+.p-user-show .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem -1rem;
+  padding-bottom: 3rem;
+}
+
+.p-user-show .gallery-item {
+  position: relative;
+  flex: 1 0 22rem;
+  margin: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.p-user-show .gallery-item:hover .gallery-item-info,
+.p-user-show .gallery-item:focus .gallery-item-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.p-user-show .gallery-item-info {
+  display: none;
+}
+
+.p-user-show .gallery-item-info li {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.p-user-show .gallery-item-likes {
+  margin-right: 2.2rem;
+}
+
+.p-user-show .gallery-item-type {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.p-user-show .fa-clone,
+.p-user-show .fa-comment {
+  transform: rotateY(180deg);
+}
+
+.p-user-show .gallery-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-user-show .loader {
+  width: 5rem;
+  height: 5rem;
+  border: 0.6rem solid #999;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  margin: 0 auto;
+  -webkit-animation: loader 500ms linear infinite;
+          animation: loader 500ms linear infinite;
+}
+
+@media screen and (max-width: 40rem) {
+  .p-user-show .profile {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+  }
+
+  .p-user-show .profile::after {
+    display: none;
+  }
+
+  .p-user-show .profile-image,
+  .p-user-show .profile-user-settings,
+  .p-user-show .profile-bio,
+  .p-user-show .profile-stats {
+    float: none;
+    width: auto;
+  }
+
+  .p-user-show .profile-image img {
+    width: 7.7rem;
+  }
+
+  .p-user-show .profile-user-settings {
+    flex-basis: calc(100% - 10.7rem);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .p-user-show .profile-user-name {
+    font-size: 2.2rem;
+  }
+
+  .p-user-show .profile-edit-btn {
+    order: 1;
+    padding: 0;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .p-user-show .profile-edit-btn {
+    margin-left: 0;
+  }
+
+  .p-user-show .profile-bio {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+  }
+
+  .p-user-show .profile-edit-btn,
+  .p-user-show .profile-bio,
+  .p-user-show .profile-stats {
+    flex-basis: 100%;
+  }
+
+  .p-user-show .profile-stats {
+    order: 1;
+    margin-top: 1.5rem;
+  }
+
+  .p-user-show .profile-stats ul {
+    display: flex;
+    text-align: center;
+    padding: 1.2rem 0;
+    border-top: 0.1rem solid #dadada;
+    border-bottom: 0.1rem solid #dadada;
+  }
+
+  .p-user-show .profile-stats li {
+    font-size: 1.4rem;
+    flex: 1;
+    margin: 0;
+  }
+
+  .p-user-show .profile-stat-count {
+    display: block;
+  }
+}
+
+@-webkit-keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@supports (display: grid) {
+  .p-user-show .profile {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 3rem;
+    align-items: center;
+  }
+
+  .p-user-show .profile-image {
+    grid-row: 1/-1;
+  }
+
+  .p-user-show .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-gap: 2rem;
+  }
+
+  .p-user-show .profile-image,
+  .p-user-show .profile-user-settings,
+  .p-user-show .profile-stats,
+  .p-user-show .profile-bio,
+  .p-user-show .gallery-item,
+  .p-user-show .gallery {
+    width: auto;
+    margin: 0;
+  }
+
+@media (max-width: 40rem) {
+    .p-user-show .profile {
+      grid-template-columns: auto 1fr;
+      grid-row-gap: 1.5rem;
+    }
+
+    .p-user-show .profile-image {
+      grid-row: 1/2;
+    }
+
+    .p-user-show .profile-user-settings {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: 1rem;
+    }
+
+    .p-user-show .profile-edit-btn,
+    .p-user-show .profile-stats,
+    .p-user-show .profile-bio {
+      grid-column: 1/-1;
+    }
+
+    .p-user-show .profile-user-settings,
+    .p-user-show .profile-edit-btn,
+    .p-user-show .profile-settings-btn,
+    .p-user-show .profile-bio,
+    .p-user-show .profile-stats {
+      margin: 0;
+    }
+}
+}
+
+:root {
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  min-height: 100vh;
+  background-color: #fafafa;
+  color: #262626;
+  padding-bottom: 3rem;
+}
+
+.container {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+p {
+  margin-bottom: 0px;
 }
 

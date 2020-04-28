@@ -21,4 +21,8 @@ Route::group(['middleware' => ['auth']], function () {
   Route::resource('posts', 'PostController', [
       'only' => ['create', 'store']
   ]);
+
+  Route::resource('users', 'UserController', [
+      'only' => ['show']
+  ]);
 });
