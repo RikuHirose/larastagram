@@ -32,6 +32,32 @@
                     <img src="https://image.flaticon.com/icons/svg/60/60993.svg"/>
                     <p>24 likes</p>
                 </div>
+
+                <div class="comments">
+                    <!-- auth user comment -->
+                    <p>
+                        <span class="user-name">{{ $post->user->name }}</span>
+                        {{ $post->description }}
+                    </p>
+                    <!-- user comment -->
+
+                    <p>
+                        <span class="user-name">test</span>
+                        hahaha
+                    </p>
+
+                    <p>
+                        <span class="user-name">test</span>
+                        hahaha
+                    </p>
+                </div>
+
+                <div class="comment-input">
+                    <input type="text" name="comment" placeholder="コメントを追加">
+                    <button class="btn btn-link">
+                        投稿する
+                    </button>
+                </div>
             </div>
         @endforeach
     </div>

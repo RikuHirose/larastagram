@@ -7,7 +7,7 @@
                 </a>
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-4 text-center">
                 <a href="{{ route('index') }}">
                     <img src="https://cdn.worldvectorlogo.com/logos/instagram-1.svg" width="56%"/>
                 </a>
@@ -17,19 +17,6 @@
                 <a href="{{ route('users.show', auth::user()->id) }}">
                     <img src="https://randomuser.me/api/portraits/women/84.jpg" width="13%" style="border-radius: 50%;" />
                 </a>
-
-                <!-- <img src="https://randomuser.me/api/portraits/women/84.jpg" width="25%" class="profile-img dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                     document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                </div> -->
             </div>
         </div>
     </div>

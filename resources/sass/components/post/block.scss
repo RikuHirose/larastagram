@@ -1,6 +1,7 @@
 .c-post-block {
   margin-bottom: 8px;
-  padding-bottom: 8px;
+  border: 1px solid #efefef;
+  font-size: 12px;
 
   img {
     display: inline-block;
@@ -24,9 +25,17 @@
     padding:0px 10px;
     justify-content:space-between;
 
+    &-image {
+      img {
+        width: 100%;
+        max-height: 424px;
+        object-fit: cover;
+      }
+    }
+
     .profile-img{
       border-radius: 50%;
-      width: 24%;
+      width: 12%;
     }
 
     .detail-img {
@@ -39,8 +48,8 @@
       justify-content:flex-start;
       p {
         padding-left: 5px;
-        font-weight: bold;
-        font-size: 16px;
+        font-weight: 600;
+        font-size: 13px;
       }
     }
   }
@@ -54,22 +63,47 @@
     }
   }
   .likes *{
-    padding:5px 5px;
+    padding: 5px 5px 0 5px;
   }
 
-  .like-count{
+  .like-count {
     display: flex;
     align-items: center;
-    padding:0px 10px;
+    padding: 0px 10px;
 
     img {
       width: 3%;
     }
 
-    p{
-      font-size: 0.7em;
+    p {
       padding: 5px;
       font-weight: bold;
+    }
+  }
+
+  .comments {
+    padding: 0px 10px;
+    .user-name {
+      margin-right: 4px;
+      font-weight: 600;
+    }
+  }
+
+  .comment-input {
+    margin-top: 8px;
+    border-top: 1px solid #efefef;
+    width: 100%;
+
+    input {
+      width: 79%;
+      border: none;
+      padding: 8px;
+      padding-left: 16px;
+      font-size: 11px;
+    }
+    button {
+      width: 20%;
+      font-size: 11px;
     }
   }
 }
