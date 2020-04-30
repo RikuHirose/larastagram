@@ -40,23 +40,23 @@
                         {{ $post->description }}
                     </p>
                     <!-- user comment -->
-
-                    <p>
-                        <span class="user-name">test</span>
-                        hahaha
-                    </p>
-
-                    <p>
-                        <span class="user-name">test</span>
-                        hahaha
-                    </p>
+                    @foreach($post->comments as $comment)
+                        <p>
+                            <span class="user-name">{{ $comment->user->name }}</span>
+                            {{ $comment->description }}
+                        </p>
+                    @endforeach
                 </div>
 
                 <div class="comment-input">
-                    <input type="text" name="comment" placeholder="コメントを追加">
-                    <button class="btn btn-link">
-                        投稿する
-                    </button>
+                    <form action="{{ route('comments.store') }}" method="POST">
+                        @csrf
+                        <input type="text" name="description" placeholder="コメントを追加" required>
+                        <input type="hidden" name="post_id" value="{{ $post->id }}" required>
+                        <button class="btn btn-link" type="submit">
+                            投稿する
+                        </button>
+                    </form>
                 </div>
             </div>
         @endforeach
