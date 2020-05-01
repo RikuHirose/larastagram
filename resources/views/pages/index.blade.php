@@ -7,12 +7,12 @@
             <div class="c-post-block">
                 <div class="post">
                   <div class="name">
-                    <img src="https://randomuser.me/api/portraits/women/84.jpg" class="profile-img"/>
-                    <p>
-                        <a href="{{ route('users.show', $post->user->id) }}">
+                    <a href="{{ route('users.show', $post->user->id) }}">
+                        <img src="{{ $post->user->logo_url }}" class="profile-img"/>
+                        <p>
                             {{ $post->user->name }}
-                        </a>
-                    </p>
+                        </p>
+                    </a>
                   </div>
                   <img src="https://image.flaticon.com/icons/svg/149/149947.svg" class="detail-img"/>
                 </div>

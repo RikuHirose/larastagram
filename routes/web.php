@@ -35,6 +35,6 @@ Route::group(['middleware' => ['auth']], function () {
   ]);
 
   Route::resource('follows', 'FollowController', [
-      'only' => ['store', 'destroy']
+      'only' => ['index', 'store', 'destroy']
   ]);
 });

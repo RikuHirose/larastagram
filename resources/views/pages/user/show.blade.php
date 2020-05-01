@@ -16,7 +16,7 @@
 
             <h1 class="profile-user-name">{{ $user->name }}_</h1>
 
-            @if($isFollow)
+            @if($user->is_following)
               <form action="{{ route('follows.destroy', 1) }}" method="POST" style="display: inline;">
                 @csrf
                 <input name="_method" type="hidden" value="DELETE">

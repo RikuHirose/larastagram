@@ -11,6 +11,7 @@
 
 // modules
 @import "./modules/icon";
+@import "./modules/button";
 
 // layouts
 @import './layouts/header';
@@ -22,6 +23,7 @@
 
 // pages
 @import './pages/user/show';
+@import './pages/follow/index';
 
   :root {
     font-size: 10px;

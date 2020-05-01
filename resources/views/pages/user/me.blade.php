@@ -40,8 +40,16 @@
 
             <ul>
               <li><span class="profile-stat-count">{{ count($authUser->posts) }}</span> posts</li>
-              <li><span class="profile-stat-count">{{ count($authUser->followers) }}</span> followers</li>
-              <li><span class="profile-stat-count">{{ count($authUser->following) }}</span> following</li>
+              <li>
+                <a href="{{ route('follows.index', ['type' => 'followers']) }}">
+                  <span class="profile-stat-count">{{ count($authUser->followers) }}</span> followers
+                </a>
+              </li>
+              <li>
+                <a href="{{ route('follows.index', ['type' => 'following']) }}">
+                  <span class="profile-stat-count">{{ count($authUser->following) }}</span> following
+                </a>
+              </li>
             </ul>
 
           </div>
@@ -55,6 +63,7 @@
       </div>
       <!-- End of profile section -->
     </div>
+
     <div class="c-post-gallery">
       <div class="gallery">
 

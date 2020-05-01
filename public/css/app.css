@@ -10907,6 +10907,31 @@ a.text-dark:focus {
   color: #fff;
 }
 
+/* ----------------------------------------------------------------------------
+ * Button
+ * ------------------------------------------------------------------------- */
+
+.m-btn {
+  min-width: 128px;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  border: 0.1rem solid #dbdbdb;
+  border-radius: 0.3rem;
+  padding: 0 2.4rem;
+  margin-left: 2rem;
+  font-weight: 600;
+}
+
+.m-btn[btn-type=unfollow] {
+  color: #fff;
+  background-color: #0095f6;
+}
+
+.m-btn[btn-type=follow] {
+  color: black;
+  background-color: #fff;
+}
+
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -10952,6 +10977,7 @@ a.text-dark:focus {
 }
 
 .c-post-block .post .name a {
+  display: contents;
   text-decoration: none;
   color: black;
 }
@@ -11177,6 +11203,11 @@ a.text-dark:focus {
   cursor: pointer;
 }
 
+.c-user-profile .profile-stats li a {
+  text-decoration: none;
+  color: black;
+}
+
 .c-user-profile .profile-stats li:last-of-type {
   margin-right: 0;
 }
@@ -11398,6 +11429,38 @@ a.text-dark:focus {
       margin: 0;
     }
 }
+}
+
+.p-follow-index .post * {
+  padding: 5px 0px;
+}
+
+.p-follow-index .post {
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  justify-content: space-between;
+}
+
+.p-follow-index .post .profile-img {
+  border-radius: 50%;
+  width: 12%;
+}
+
+.p-follow-index .post .name {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.p-follow-index .post .name p {
+  padding-left: 5px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.p-follow-index .post .name a {
+  text-decoration: none;
+  color: black;
 }
 
 :root {

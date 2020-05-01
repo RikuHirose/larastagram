@@ -22,7 +22,7 @@ class PostController extends Controller
             $fileName = $request->file('image')->getClientOriginalName();
             $request->file('image')->storeAs('public/postImages',$fileName);
 
-            $fullFilePath = 'storage/postImages/'.$fileName;
+            $fullFilePath = '/storage/postImages/'.$fileName;
             $description  = $request->input('description');
 
             Post::create([

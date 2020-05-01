@@ -1,0 +1,23 @@
+/* ----------------------------------------------------------------------------
+ * Button
+ * ------------------------------------------------------------------------- */
+.m-btn{
+  min-width: 128px;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  border: 0.1rem solid #dbdbdb;
+  border-radius: 0.3rem;
+  padding: 0 2.4rem;
+  margin-left: 2rem;
+  font-weight: 600;
+
+  &[btn-type="unfollow"] {
+    color: #fff;
+    background-color: #0095f6;
+  }
+
+  &[btn-type="follow"] {
+    color: black;
+    background-color: #fff;
+  }
+}
