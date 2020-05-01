@@ -21,7 +21,20 @@
 
                 <div class="likes">
                     <div class="left-icons">
-                        <img src="https://image.flaticon.com/icons/svg/25/25424.svg"/>
+
+                        @if($post->is_like)
+                            <img src="{{ asset('images/love-and-romance.svg') }}">
+                        @else
+
+                            <form action="{{ route('likes.store') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="post_id" value="{{ $post->id }}" required>
+                                <button type="submit" style="display: contents;">
+                                    <img src="https://image.flaticon.com/icons/svg/25/25424.svg"/>
+                                </button>
+                            </form>
+                        @endif
+
                         <img src="https://image.flaticon.com/icons/svg/54/54916.svg"/>
                         <img src="https://image.flaticon.com/icons/svg/126/126536.svg"/>
                     </div>
@@ -30,7 +43,7 @@
 
                 <div class="like-count">
                     <img src="https://image.flaticon.com/icons/svg/60/60993.svg"/>
-                    <p>24 likes</p>
+                    <p>{{ count($post->likes) }} likes</p>
                 </div>
 
                 <div class="comments">

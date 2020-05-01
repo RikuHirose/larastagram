@@ -10989,6 +10989,11 @@ a.text-dark:focus {
   width: 5%;
 }
 
+.c-post-block .likes form {
+  padding: 0;
+  display: inline;
+}
+
 .c-post-block .likes * {
   padding: 5px 5px 0 5px;
 }

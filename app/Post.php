@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Like;
 
 class Post extends Model
 {
@@ -17,6 +18,23 @@ class Post extends Model
         'img_url',
     ];
 
+    /**
+     * モデルの配列形態に追加するアクセサ
+     *
+     * @var array
+     */
+    protected $appends = ['is_like'];
+
+    /**
+     * judge auth user liked post
+     *
+     * @return bool true | false
+     */
+    public function getIsLikeAttribute(): bool
+    {
+        return Like::existsByUserIdAndPostId(\Auth::user()->id, $this->id);
+    }
+
     // relation
     public function user()
     {
@@ -26,5 +44,10 @@ class Post extends Model
     public function comments()
     {
         return $this->hasMany('App\Comment', 'post_id', 'id');
+    }
+
+    public function likes()
+    {
+        return $this->hasMany('App\Like', 'post_id', 'id');
     }
 }

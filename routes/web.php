@@ -29,4 +29,8 @@ Route::group(['middleware' => ['auth']], function () {
   Route::resource('comments', 'CommentController', [
       'only' => ['store']
   ]);
+
+  Route::resource('likes', 'LikeController', [
+      'only' => ['store']
+  ]);
 });

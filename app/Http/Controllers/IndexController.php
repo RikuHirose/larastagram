@@ -12,7 +12,7 @@ class IndexController extends Controller
     public function index()
     {
         $posts = Post::latest()->get();
-        $posts->load('user', 'comments.user');
+        $posts->load('user', 'comments.user', 'likes');
 
         return view('pages.index', [
           'posts' => $posts
