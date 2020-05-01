@@ -40,8 +40,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // relation
     public function posts()
     {
         return $this->hasMany(\App\Post::class, 'user_id', 'id');
+    }
+
+    public function following()
+    {
+        return $this->hasMany('App\Follow', 'from_user_id');
+    }
+
+    public function followers()
+    {
+        return $this->hasMany('App\Follow', 'to_user_id');
     }
 }

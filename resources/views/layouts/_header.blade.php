@@ -15,7 +15,7 @@
 
             <div class="col-sm-4 text-right">
                 <a href="{{ route('users.show', auth::user()->id) }}">
-                    <img src="https://randomuser.me/api/portraits/women/84.jpg" width="13%" style="border-radius: 50%;" />
+                    <img src="{{ auth::user()->logo_url }}" width="13%" style="border-radius: 50%;" />
                 </a>
             </div>
         </div>

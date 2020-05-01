@@ -25,6 +25,13 @@
     padding:0px 10px;
     justify-content:space-between;
 
+    .name {
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
     &-image {
       img {
         width: 100%;
