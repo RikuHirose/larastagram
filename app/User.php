@@ -47,7 +47,10 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $appends = ['is_following'];
+    protected $appends = [
+        'is_following',
+        'follow_id',
+    ];
 
     /**
      * judge auth user is following
@@ -57,6 +60,18 @@ class User extends Authenticatable
     public function getIsFollowingAttribute(): bool
     {
         return Follow::existsByToUserIdAndFromUserId($this->id, \Auth::user()->id);
+    }
+
+    /**
+     * judge auth user is following
+     *
+     * @return int $followId
+     */
+    public function getFollowIdAttribute(): int
+    {
+        $follow = Follow::findByToUserIdAndFromUserId($this->id, \Auth::user()->id);
+
+        return $follow->id;
     }
 
     // relation

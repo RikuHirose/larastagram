@@ -64,5 +64,13 @@
 
 p {
   margin-bottom: 0px;
+  font-size: 12px;
 }
 
+input::placeholder {
+  font-size: 12px;
+}
+
+textarea::placeholder {
+  font-size: 12px;
+}

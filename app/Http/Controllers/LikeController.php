@@ -12,10 +12,18 @@ class LikeController extends Controller
     public function store(Request $request)
     {
         Like::create([
-          'user_id'     => \Auth::user()->id,
-          'post_id'     => $request->input('post_id'),
+          'user_id' => \Auth::user()->id,
+          'post_id' => $request->input('post_id'),
         ]);
 
         return redirect(route('index'));
+    }
+
+    public function destroy(Request $request)
+    {
+        $like = Like::findByUserIdAndPostId(\Auth::user()->id, $request->input('post_id'));
+        $like->delete();
+
+        return redirect()->back();
     }
 }

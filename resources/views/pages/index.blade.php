@@ -25,9 +25,15 @@
                     <div class="left-icons">
 
                         @if($post->is_like)
-                            <img src="{{ asset('images/love-and-romance.svg') }}">
+                            <form action="{{ route('likes.destroy', $post->like_id) }}" method="POST">
+                                @csrf
+                                <input name="_method" type="hidden" value="DELETE">
+                                <input type="hidden" name="post_id" value="{{ $post->id }}" required>
+                                <button type="submit" style="display: contents;">
+                                    <img src="{{ asset('images/love-and-romance.svg') }}">
+                                </button>
+                            </form>
                         @else
-
                             <form action="{{ route('likes.store') }}" method="POST">
                                 @csrf
                                 <input type="hidden" name="post_id" value="{{ $post->id }}" required>

@@ -23,7 +23,10 @@ class Post extends Model
      *
      * @var array
      */
-    protected $appends = ['is_like'];
+    protected $appends = [
+        'is_like',
+        'like_id',
+    ];
 
     /**
      * judge auth user liked post
@@ -33,6 +36,17 @@ class Post extends Model
     public function getIsLikeAttribute(): bool
     {
         return Like::existsByUserIdAndPostId(\Auth::user()->id, $this->id);
+    }
+
+    /**
+     *
+     * @return int $like id
+     */
+    public function getLikeIdAttribute(): int
+    {
+        $like = Like::findByUserIdAndPostId(\Auth::user()->id, $this->id);
+
+        return $like->id;
     }
 
     // relation

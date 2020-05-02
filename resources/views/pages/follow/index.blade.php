@@ -14,7 +14,7 @@
                 </p>
               </div>
               @if($user->is_following)
-              <form action="{{ route('follows.destroy', 1) }}" method="POST" style="display: inline;">
+              <form action="{{ route('follows.destroy', $user->follow_id) }}" method="POST" style="display: inline;">
                 @csrf
                 <input name="_method" type="hidden" value="DELETE">
                 <input type="hidden" name="to_user_id" value="{{ $user->id }}">

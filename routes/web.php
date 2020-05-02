@@ -31,7 +31,7 @@ Route::group(['middleware' => ['auth']], function () {
   ]);
 
   Route::resource('likes', 'LikeController', [
-      'only' => ['store']
+      'only' => ['store', 'destroy']
   ]);
 
   Route::resource('follows', 'FollowController', [
